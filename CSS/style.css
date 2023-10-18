@@ -1,0 +1,315 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+  transition: color 0.3s ease;
+  background: white;
+}
+.wrapper {
+  width: 70%;
+  margin: auto;
+}
+.page_header {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 67%,
+    rgba(116, 0, 0, 1) 85%,
+    rgba(116, 0, 0, 1) 100%
+  );
+  background-attachment: fixed;
+  margin: 0 0;
+  padding: 50px;
+}
+
+.header_logo {
+  /* Logo CSS */
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 140px;
+  float: left;
+  margin-left: 20px;
+  margin-top: -40px;
+}
+
+/* Menu og submenu CSS */
+
+.navbar {
+  overflow: hidden;
+}
+
+.navbar a {
+  float: right;
+  font-size: x-large;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: right;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: x-large;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+  opacity: 80%;
+  text-decoration: underline;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: -15%;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: right;
+  color: white;
+  background-color: #000000;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+h1 {
+  margin: 20px;
+  padding: 70px;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+  color: #2a363b;
+}
+
+#overskrift {
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+  color: #2a363b;
+}
+
+h2 {
+  text-align: center;
+  color: #2a363b;
+}
+
+h4 {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  color: #2a363b;
+  font-size: 25px;
+}
+
+/* forside artikler css */
+
+div.gallery {
+  border: 0px solid #000000;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+div.gallery:hover {
+  border: 1px solid #740000;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+p.desc {
+  color: #2a363b;
+  display: flex;
+  padding: 15px;
+  flex-direction: row;
+  background-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.artikler {
+  padding: 0 -10px;
+  float: left;
+  width: 24.99999%;
+  margin: 4%;
+  margin-top: 10%;
+  margin-bottom: 40%;
+  background-color: #ffffff;
+}
+
+/* Responsive artikler */
+
+@media only screen and (max-width: 700px) {
+  .artikler {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .artikler {
+    width: 100%;
+  }
+}
+
+main {
+  overflow: hidden;
+  min-height: 100vh; /* havde problemer med min footer, så giver mit main content en minimum højde på 100vh, og en margin bottom på - 100px,
+fordi min footer har en minimum højde på 100px (PUSH METODEN) */
+  margin-bottom: -100px;
+}
+
+.omwine {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.footer_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 67%,
+    rgba(116, 0, 0, 1) 85%,
+    rgba(116, 0, 0, 1) 100%
+  );
+  height: 100px;
+  color: #ffffff;
+  bottom: 0%;
+}
+
+/* Her starter css til "Om os" */
+.omos_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 100px 20px;
+  align-content: baseline;
+  background-color: #ffffff;
+}
+
+.article1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin: 1px;
+  text-align: center;
+  z-index: 1;
+}
+
+.article1 p {
+  font-size: 20px;
+  margin-top: 25px;
+  max-width: 900px;
+  color: #2a363b;
+}
+
+.italic1 {
+  font-size: 30px;
+  color: #2a363b;
+}
+
+.imagelogo_container {
+  /* OM OS Wine not foto*/
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+  margin-top: 0px;
+  margin-bottom: 70px;
+  height: 250px;
+}
+
+/* Her starter css til artiklerne  */
+
+.vinforbegyndere_container {
+  /* Vin for begyndere foto*/
+
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+  margin-top: -100px;
+  height: 400px;
+}
+
+.vinforbegyndereimage_container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+  padding: 15px;
+}
+
+.artikel_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 100px 20px;
+  align-content: baseline;
+  background-color: #ffffff;
+}
+
+.article2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article2 img {
+  max-width: 20%;
+  height: auto;
+  padding: 10px;
+}
+
+.artikle1_image {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  margin: 5px;
+  padding: 0px;
+}
+
+.article2 p {
+  font-size: 18px;
+  margin: 10px;
+  max-width: 900px;
+  z-index: 2;
+  color: #2a363b;
+}
+
+.italic2 {
+  font-size: 25px;
+  margin-top: -30px;
+}
+
+.article2_h2 {
+  font-size: 25px;
+  margin-left: -535px;
+  margin-top: 20px;
+  color: #2a363b;
+}
